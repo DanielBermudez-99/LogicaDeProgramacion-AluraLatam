@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PROGRAMA CALCULAR IMC</title>
+</head>
+
+<body>
+
+    <h1>PROGRAMA CALCULAR IMC</h1>
+
+    <script>
+        // Función para insertar saltos de línea
+        function saltarlinea() {
+            document.write("<br><br><br>");
+        }
+
+        // Función para imprimir y agregar saltos de línea
+        function imprimir(frase) {
+            document.write(frase);
+            saltarlinea();
+        }
+
+        // Función para calcular el IMC
+        function calcularIMC(peso, altura) {
+            imc = peso / (altura * altura);
+            return (imc);
+        }
+
+        nombre = prompt("Ingrese su nombre: ");
+        pesoInformado = prompt(nombre +", Ingrese su peso: ");
+        alturaInformada = prompt(nombre + ",Ingrese su altura: ");
+
+        imcCalculado = calcularIMC(pesoInformado, alturaInformada);
+        
+        imprimir(nombre + ", su IMC calculado  es: "  + imcCalculado); // Corregido aquí
+
+        if (imcCalculado < 18.5) {
+            imprimir("Abajo del peso normal")
+        }
+        if (imcCalculado >= 18.5 && imcCalculado <= 24.9) {
+            imprimir("Peso normal")
+        }
+        if (imcCalculado >= 25 && imcCalculado <= 30) {
+            imprimir("Sobrepeso")
+        }
+        if (imcCalculado >= 30) {
+            imprimir("Obesidad")
+        }
+    </script>
+
+</body>

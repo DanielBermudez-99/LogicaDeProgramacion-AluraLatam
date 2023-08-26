@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+function sorteo () {
+    numeroPensado = Math.round(Math.random(1) * 3);
+}
+
+function loteria () {
+    
+    n = parseInt(prompt("Ingrese su número de loteria:"))
+    
+    sorteo();
+
+    if (n == numeroPensado) {
+        imprimir("Has ganado la lotería")
+    }
+    else {
+        imprimir("Sigue intentando")
+    }
+}
+
+loteria()
+</script>
